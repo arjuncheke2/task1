@@ -1,0 +1,31 @@
+1.Write a blog on Difference between HTTP1.1 vs HTTP2
+
+HTTP 1.1                                      HTTP2
+1.it usest works on the textual format       1.it works on the binary protocol
+2.it compress data by itself.                2.it uses HPACK for data compression.
+3.There is head of line blocking that        3.It allows multiplexing so one TCP 
+  blocks all the requests behind it            connection is required for multiple request.
+  until it doesn’t get its all resources
+4.It uses requests resource Inlining for     4.It uses PUSH frame by server that collects
+use getting multiple pages                    all multiple pages.
+5. it is a standard protocol                 5.a protocol for greater performance
+6.loads resources one after the other,       6. it is able to use a single TCP connection
+so if one resource cannot be loaded, it      to send multiple streams of data at once so that
+blocks all the other resources behind it      no one resource blocks any other resource.
+
+
+2.Write a blog about objects and its internal representation in Javascript
+Object :: In js,an object is a standalone entity,with properties and type.
+
+ we can create objects by two methods in js:
+ 1.By object literal 
+ 2.using new keyword/by creating instances of object directly
+
+ by object literal ::
+ syntax=object={key:value....}
+key and value is separated by colon(:)
+
+by creating instance of Object directly (using new keyword):
+ var objectName=new Object();
+
+ here we are using new keyword to create an object.
